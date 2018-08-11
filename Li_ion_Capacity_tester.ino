@@ -8,7 +8,7 @@ U8GLIB_SH1106_128X64 u8g(U8G_I2C_OPT_NONE);  // I2C interface for OLED
 
 float Res_Value = 10.0; //Value of Power Resistor used
 float Vcc = 4.70;       //Arduino 5V pin Voltage (Mesured by Multimeter)
-float Bat_High = 4.30;  //Battery Over Voltage
+float Bat_High = 4.35;  //Battery Over Voltage
 float Bat_Low = 2.90;   //Battery Under Voltage
 float Current = 0.00;
 float mA = 0;

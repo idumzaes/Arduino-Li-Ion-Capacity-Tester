@@ -19,7 +19,7 @@ U8G2_SSD1306_128X64_NONAME_1_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SD
 
 float Res_Value = 10.0; //Value of Power Resistor used
 float Vcc = 4.70;       //Arduino 5V pin Voltage (Mesured by Multimeter)
-float Bat_High = 4.30;  //Battery Over Voltage
+float Bat_High = 4.35;  //Battery Over Voltage
 float Bat_Low = 2.90;   //Battery Under Voltage
 float Current = 0.00;
 float mA = 0;
@@ -138,7 +138,7 @@ void loop() {
     //Write to SD
     File dataFile = SD.open("battery.txt", FILE_WRITE);
     if (dataFile) {
-      dataFile.println(Capacity); dataFile.print(","); dataFile.print(Bat_Volt);
+      dataFile.print(Capacity); dataFile.print(","); dataFile.println(Bat_Volt);
       dataFile.close();
       //Print in Serial Monitor
       Serial.print("DATA,TIME,"); Serial.print(Bat_Volt); Serial.print(","); Serial.println(Capacity);
